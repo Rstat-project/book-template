@@ -11,28 +11,27 @@ bookdown::gitbook:
       collapse: section
       scroll_highlight: yes
       before: |
-        <li><a href="./">Book Template</a></li>
-        <li><a href="https://zenodo.org/badge/latestdoi/166559207"><img src="https://zenodo.org/badge/166559207.svg" alt="DOI"></a></li>
+        <li><a href="./">可重製統計：中文學習手冊</a></li>
       after: |
         <li><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" 
             target="blank"><img alt="Creative Commons License" 
             style="border-width:0" 
             src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a></li>
-        <li><a href="https://psyteachr.github.io/books" target="blank">PsyTeachR Books</a></li>
+        <li><a href="https://scchen.com" target="blank">陳紹慶編著</a></li>
     download: []
     fontsettings:
       theme: white
       family: sans
       size: 2
     sharing:
-      facebook: yes
-      twitter: yes
+      facebook: no
+      twitter: no
       google: no
       linkedin: no
       weibo: no
       instapaper: no
       vk: no
-      all: ['facebook', 'google', 'twitter', 'linkedin', 'weibo', 'instapaper']
+      ##all: ['facebook', 'google', 'twitter', 'linkedin', 'weibo', 'instapaper']
 bookdown::pdf_book:
   includes:
     in_header: preamble.tex

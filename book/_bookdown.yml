@@ -6,10 +6,10 @@ delete_merged_file: true
 clean: []
 language:
   ui:
-    chapter_name: "Chapter "
+    chapter_name: "單元 "
   label:
-    fig: 'Figure '
-    tab: 'Table '
+    fig: '圖 '
+    tab: '表 '
     eq: 'Equation '
     thm: 'Theorem '
     lem: 'Lemma '

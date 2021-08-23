@@ -1,13 +1,13 @@
 --- 
-title: "Book Template"
-author: "Lisa DeBruine"
+title: "可重製統計：中文學習手冊"
+author: "陳紹慶"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
 biblio-style: apalike
 link-citations: yes
-description: "Guide for psyTeachR course books."
+description: "以資料科學為基礎，學習統計的入門指南。"
 ---
 
 ```{r cite-packages, include = FALSE}
@@ -19,27 +19,119 @@ knitr::write_bib(c(
 
 ```
 
-# Overview {-}
+# 課程說明 {-}
 
-The best resource for creating a course book is the [bookdown website](https://bookdown.org/). Yihui Xie's [Bookdown](https://bookdown.org/yihui/bookdown/) book can answer most of the questions you'll have. This guide is just a quick start for the specific templates we're using at UofG Psychology.
-
-## Updating an existing book
-
-Download the [psyTeachR Bookdown Course Template](files/book-template.zip), unzip it, and copy the files to your existing project, overwriting any files (see the list below for exceptions). Check `_index_example.Rmd` for anything that might need to be updated in your existing `index.Rmd` file.
-
-Some files will have been customised for your book. Check if those files need updated, but don't overwrite them.
-
-* `_output.yml`: you will have customised the `config: before:` and `config: after:` sections for your book title
-* `_bookdown/yml`: you may have customised the `output_dir`
-* `include/header.html`: this contains info for Twitter sharing that you've probably customised
-* `include/footer.html`: you may have customised this footer, but it's usually blank
+(TBA)
 
 
-## Updating webex
+## 授課/學習模式
 
-Version 0.22 of bookdown caused a conflict with webex, which has been fixed in version 0.9.2, now on CRAN. After you update webex, you need to follow the procedure above to update the existing book. The files that specifically need to change are:
+- 每週上課時間3小時；課間學習時間x小時。
 
-* `_output.yml` (`df_print:` and `css:` lines)
-* `include/psyteachr.css` (replace)
-* `include/webex.css` (new)
-* `include/webex.js` (replace)
+- 學習行動時間分配
+
+|模式A|上課|課間|
+|:---:|:---:|:---:|
+|講授/學習| 100% | 0% |
+|作業練習| 0% | 100% |
+
+
+|模式B|上課|課間|
+|:---:|:---:|:---:|
+|講授/學習| 20%$^1$ | 80%$^2$ |
+|作業練習| 80%$^3$ | 20%$^4$ |
+
+1. 課堂作業說明，不完全採用psyteachr的資料
+2. 依照學習影片學習psyteachr內容，用於下週作業練習
+3. 在課堂上進行，可與同學及助教討論，下課前推送github
+4. 檢視批改建議，與老師助教反應還不夠清楚的地方。
+
+
+## 作業資料管理架構建議
+
+參考來源：[Github classroom for students](https://github.com/jfiksel/github-classroom-for-students) by [Jacob Fiksel](https://github.com/jfiksel)
+
+假設你的電腦主要磁碟機有一個資料夾`Users/myname/`，本課程學習檔案可依此架構存放。
+
+```
+Users
+│
+│
+│
+└───myname
+    │
+    │
+    │
+    └───university-documents
+        │
+        │
+        |
+        |---rstat-project-fall-2021
+            |
+            |
+            |
+            |---assignments   ## 個人作業
+            |
+            |
+            |---lectures      ## 個人上課筆記
+```
+
+
+## 課程進度
+
+### [Level 1](https://rstat-project.github.io/ug1-practical/): 110學年度上學期
+
+
+
+|週次|Psyteachr單元|學習模式|
+|:---:|:---:|:---:|
+| 1 |NA|
+| 2 |0|
+| 3 |1|
+| 4 ||
+| 5 ||
+| 6 ||
+! 7 ||
+| 8 ||
+| 9 ||
+|10 ||
+|11 ||
+|12 ||
+|13 ||
+|14 ||
+|15 ||
+|16 ||
+|17 ||
+|18 ||
+
+
+### [Level 2](https://rstat-project.github.io/ug2-practical/): 110學年度下學期
+
+
+
+
+|週次|Psyteachr單元|學習模式|
+|:---:|:---:|:---:|
+| 1 ||
+| 2 ||
+| 3 ||
+| 4 ||
+| 5 ||
+| 6 ||
+! 7 ||
+| 8 ||
+| 9 ||
+|10 ||
+|11 ||
+|12 ||
+|13 ||
+|14 ||
+|15 ||
+|16 ||
+|17 ||
+|18 ||
+
+
+## 學習成效評估
+
+TBA
