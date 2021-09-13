@@ -1,3 +1,6 @@
+
+
+
 # 0916從資料科學基本功開始的理由
 
 ## 為何心理學需要統計？
@@ -18,6 +21,12 @@
 - 以明確的問題意識理解資料存在的意義
 - 善用資料處理工具
 - 運用視覺化模組解析資料的機率特徵: 平均數、標準差、相關、廻歸模型
+
+<div class="figure" style="text-align: center">
+<img src="01-begin_files/figure-html/plot-device-1.png" alt="課前個人設備調查" width="100%" />
+<p class="caption">(\#fig:plot-device)課前個人設備調查</p>
+</div>
+6位同學使用Chromebook或沒有自己的設備。
 
 ## 可重製統計是什麼？
 

@@ -11,6 +11,13 @@ description: "隨堂授課講義，依授課場合調整內容。"
 ---
 
 
+```r
+knitr::opts_chunk$set(warning = FALSE, message = FALSE)
+library(tidyverse)
+```
+
+
+
 
 # 課程說明 {-}
 
