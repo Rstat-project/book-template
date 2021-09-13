@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>單元 3 Webex | 可重製統計：中文學習手冊</title>
   <meta name="description" content="以資料科學為基礎，學習統計的入門指南。" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="單元 3 Webex | 可重製統計：中文學習手冊" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="陳紹慶" />
 
 
-<meta name="date" content="2021-08-23" />
+<meta name="date" content="2021-09-12" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -35,6 +35,7 @@
 <link rel="next" href="inclusion.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -60,7 +60,7 @@
 <meta property="og:image" content="https://psyteachr.github.io/images/twitter/psyteachr.png">
 <meta property="og:url" content="https://psyteachr.github.io/book-template/">
 <meta property="twitter:card" content="summary_large_image">
-<!---
+<!---  有專屬icon再加上
 <link rel="shortcut icon" href="https://psyteachr.github.io/images/logo.png">
 --->
 
@@ -69,7 +69,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -173,21 +172,17 @@ div.csl-indent {
 <li class="divider"></li>
 <li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>課程說明</a>
 <ul>
-<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#授課學習模式"><i class="fa fa-check"></i><b>0.1</b> 授課/學習模式</a></li>
-<li class="chapter" data-level="0.2" data-path="index.html"><a href="index.html#作業資料管理架構建議"><i class="fa fa-check"></i><b>0.2</b> 作業資料管理架構建議</a></li>
-<li class="chapter" data-level="0.3" data-path="index.html"><a href="index.html#課程進度"><i class="fa fa-check"></i><b>0.3</b> 課程進度</a>
-<ul>
-<li class="chapter" data-level="0.3.1" data-path="index.html"><a href="index.html#level-1-110學年度上學期"><i class="fa fa-check"></i><b>0.3.1</b> <span>Level 1</span>: 110學年度上學期</a></li>
-<li class="chapter" data-level="0.3.2" data-path="index.html"><a href="index.html#level-2-110學年度下學期"><i class="fa fa-check"></i><b>0.3.2</b> <span>Level 2</span>: 110學年度下學期</a></li>
+<li class="chapter" data-level="0.0.1" data-path="index.html"><a href="index.html#level-1"><i class="fa fa-check"></i><b>0.0.1</b> Level 1</a></li>
+<li class="chapter" data-level="0.0.2" data-path="index.html"><a href="index.html#level-2"><i class="fa fa-check"></i><b>0.0.2</b> Level 2</a></li>
+<li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#學習成效評估"><i class="fa fa-check"></i><b>0.1</b> 學習成效評估</a></li>
 </ul></li>
-<li class="chapter" data-level="0.4" data-path="index.html"><a href="index.html#學習成效評估"><i class="fa fa-check"></i><b>0.4</b> 學習成效評估</a></li>
-</ul></li>
-<li class="chapter" data-level="1" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html"><i class="fa fa-check"></i><b>1</b> 從資料科學基本功開始的理由</a>
+<li class="chapter" data-level="1" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html"><i class="fa fa-check"></i><b>1</b> 0916從資料科學基本功開始的理由</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#為何心理學需要統計"><i class="fa fa-check"></i><b>1.1</b> 為何心理學需要統計？</a></li>
-<li class="chapter" data-level="1.2" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#怎麼樣算學好統計"><i class="fa fa-check"></i><b>1.2</b> 怎麼樣算學好統計？</a></li>
+<li class="chapter" data-level="1.2" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#世代學好統計的標準"><i class="fa fa-check"></i><b>1.2</b> 2020世代學好統計的標準？</a></li>
 <li class="chapter" data-level="1.3" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#資料科學基本功有什麼"><i class="fa fa-check"></i><b>1.3</b> 資料科學基本功有什麼？</a></li>
-<li class="chapter" data-level="1.4" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#如何習得資料科學基本功"><i class="fa fa-check"></i><b>1.4</b> 如何習得資料科學基本功？</a></li>
+<li class="chapter" data-level="1.4" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#課程講授及作業演練模式"><i class="fa fa-check"></i><b>1.4</b> 課程講授及作業演練模式</a></li>
+<li class="chapter" data-level="1.5" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#hello-git-and-github"><i class="fa fa-check"></i><b>1.5</b> Hello! git and github</a></li>
 </ul></li>
 <li class="chapter" data-level="2" data-path="psyteachr-style-guide.html"><a href="psyteachr-style-guide.html"><i class="fa fa-check"></i><b>2</b> PsyTeachR Style Guide</a>
 <ul>
@@ -239,22 +234,7 @@ div.csl-indent {
 <li class="chapter" data-level="4.4" data-path="inclusion.html"><a href="inclusion.html#colour-1"><i class="fa fa-check"></i><b>4.4</b> Colour</a></li>
 <li class="chapter" data-level="4.5" data-path="inclusion.html"><a href="inclusion.html#sex-gender-and-sexuality"><i class="fa fa-check"></i><b>4.5</b> Sex, gender and sexuality</a></li>
 </ul></li>
-<li class="appendix"><span><b>Appendices</b></span></li>
-<li class="chapter" data-level="A" data-path="symbols.html"><a href="symbols.html"><i class="fa fa-check"></i><b>A</b> Symbols</a></li>
-<li class="chapter" data-level="B" data-path="style-demo.html"><a href="style-demo.html"><i class="fa fa-check"></i><b>B</b> Style Demo</a>
-<ul>
-<li class="chapter" data-level="B.1" data-path="style-demo.html"><a href="style-demo.html#header-2"><i class="fa fa-check"></i><b>B.1</b> Header 2</a>
-<ul>
-<li class="chapter" data-level="B.1.1" data-path="style-demo.html"><a href="style-demo.html#header-3"><i class="fa fa-check"></i><b>B.1.1</b> Header 3</a></li>
-</ul></li>
-<li class="chapter" data-level="B.2" data-path="style-demo.html"><a href="style-demo.html#chunks"><i class="fa fa-check"></i><b>B.2</b> Chunks</a>
-<ul>
-<li class="chapter" data-level="B.2.1" data-path="style-demo.html"><a href="style-demo.html#code-chunk-with-output"><i class="fa fa-check"></i><b>B.2.1</b> Code chunk with output</a></li>
-<li class="chapter" data-level="B.2.2" data-path="style-demo.html"><a href="style-demo.html#code-chunk-with-r-header"><i class="fa fa-check"></i><b>B.2.2</b> Code chunk with r header</a></li>
-<li class="chapter" data-level="B.2.3" data-path="style-demo.html"><a href="style-demo.html#preformatted"><i class="fa fa-check"></i><b>B.2.3</b> Preformatted</a></li>
-<li class="chapter" data-level="B.2.4" data-path="style-demo.html"><a href="style-demo.html#call-out-blocks-1"><i class="fa fa-check"></i><b>B.2.4</b> Call-out blocks</a></li>
-</ul></li>
-</ul></li>
+<li class="appendix"><span><b>附錄</b></span></li>
 <li class="divider"></li>
 <li><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" 
     target="blank"><img alt="Creative Commons License" 
@@ -302,7 +282,7 @@ If you’re using webex outside of this bookdown template, such as in an rmarkdo
 </ul>
 <p>You can also create these questions dynamically, using variables from your R session (e.g., <code>x &lt;- sample(2:8, 1); fitb(x)</code>).</p>
 <ul>
-<li>The square root of 9 is: <input class='webex-solveme nospaces' size='1' data-answer='["3"]'/></li>
+<li>The square root of 4 is: <input class='webex-solveme nospaces' size='1' data-answer='["2"]'/></li>
 </ul>
 <p>The blanks are case-sensitive; if you don’t care about case, use the argument <code>ignore_case = TRUE</code> (e.g., <code>fitb("E", ignore_case = TRUE)</code>).</p>
 <ul>
@@ -345,7 +325,7 @@ If you’re using webex outside of this bookdown template, such as in an rmarkdo
 <li>Recreate the scatterplot below, using the built-in <code>cars</code> dataset.</li>
 </ul>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:plot-cars"></span>
-<img src="03-webex_files/figure-html/plot-cars-1.png" alt="Recreate this scatterplot." width="100%" />
+<img src="03-week03_files/figure-html/plot-cars-1.png" alt="Recreate this scatterplot." width="100%" />
 <p class="caption">
 圖 3.1: Recreate this scatterplot.
 </p>
@@ -360,9 +340,9 @@ I need a hint
 <button>
 Click here to see the solution
 </button>
-<div class="sourceCode" id="cb17"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb17-1"><a href="webex.html#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars<span class="sc">$</span>speed, cars<span class="sc">$</span>dist)</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode r"><code class="sourceCode r"><span id="cb18-1"><a href="webex.html#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="fu">plot</span>(cars<span class="sc">$</span>speed, cars<span class="sc">$</span>dist)</span></code></pre></div>
 <div class="figure" style="text-align: center"><span style="display:block;" id="fig:unnamed-chunk-4"></span>
-<img src="03-webex_files/figure-html/unnamed-chunk-4-1.png" alt="TRUE" width="100%" />
+<img src="03-week03_files/figure-html/unnamed-chunk-4-1.png" alt="TRUE" width="100%" />
 <p class="caption">
 圖 3.2: TRUE
 </p>
@@ -486,7 +466,6 @@ window.onload = function() {
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -528,7 +507,7 @@ gitbook.start({
 },
 "download": {},
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
