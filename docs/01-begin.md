@@ -26,7 +26,7 @@
 <img src="01-begin_files/figure-html/plot-device-1.png" alt="課前個人設備調查" width="100%" />
 <p class="caption">(\#fig:plot-device)課前個人設備調查</p>
 </div>
-6位同學使用Chromebook或沒有自己的設備。
+調查至2021-09-14 16:53:57，共有58位同學回覆，7位同學使用Chromebook或沒有自己的設備。
 
 ## 可重製統計是什麼？
 
