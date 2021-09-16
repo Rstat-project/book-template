@@ -34,4 +34,5 @@ rsutdio後台設定
 執行緒sessions
 引用r與rstudio貢獻者資訊
 取得更多幫助資訊
+參考文獻-1
 動態文件編輯入門

@@ -1,0 +1,56 @@
+# 如何進行統計課的作業 {#assignments}
+
+## 修課學生的前置準備
+
+- 註冊[github](https://github.com/)帳號
+  - 使用學校電子信箱或個人電子信箱都可以註冊，建議使用個人電子信箱，能自我管理專案履歷。
+  - 建立成功後回報你的帳號(第一次上課提供網路表單填寫)
+- 確認加入課程[github classroom](https://classroom.github.com/classrooms/88956273-rstat-project-ncku-2021fall)。成功加入後，以github帳號密碼登入可看到頁面資訊。
+  - 加入途徑1: 從moodle匯入學籍資訊，只要告知老師/助教你的github帳號
+  - 加入途徑2: 請老師/助教加入你的學籍資訊與github帳號
+
+
+## 領取作業
+
+從課程的[github classroom](https://classroom.github.com/classrooms/88956273-rstat-project-ncku-2021fall)取得作業邀請連結。每週作業在教老師公告後生效，必須在期限內使用邀請連結，建立作業複本。
+
+> 以下用永久公開作業`Hello! Git and github`示範
+
+1. 進入頁面，依動畫示範取得指定作業邀請連結
+
+![](images/nckupsy2021/0-0-getlink.gif)
+
+2. 開啟新視窗，在網址列貼上邀請連結。進入畫面如下圖。
+
+![](images/nckupsy2021/0-1-checkin.png)
+
+3. 點擊"Accept this assignment"，稍等一下，進入如下圖的畫面代表已建立作業複本。
+
+![](images/nckupsy2021/0-2-success.png)
+
+4. 切換到個人github，檢視已建立複本。作業複本名稱規則是`assignment_name-myaccountname`。下圖是助教測試的頁面。
+
+![](images/nckupsy2021/0-3-assignment-copy.png)
+
+
+## 完成作業
+
+- 建立Rstudio Project：以上步驟成功，按照以下影片示範，就能在個人本機端Rstudio建立專案。
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yeLSkxtc-kI?start=193" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+- 本機端專案資料夾存放位置，請參考**[作業資料管理架構建議](https://rstat-project.github.io/ug-tactic/index.html#%E4%BD%9C%E6%A5%AD%E8%B3%87%E6%96%99%E7%AE%A1%E7%90%86%E6%9E%B6%E6%A7%8B%E5%BB%BA%E8%AD%B0)**。
+
+- 依照**作業指示**完成作業。除了`Hello! Git and github`，每項作業的`README.md`都有指示，說明如何完成該次作業。
+
+## 上傳作業
+
+- 完成作業時，請commit你的最後存檔。
+
+- 推送作業成果到個人作業github的操作方法，可參考以下影片：
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yeLSkxtc-kI?start=1528" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+
+## 檢視作業回饋
+

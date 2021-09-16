@@ -1,5 +1,5 @@
 --- 
-title: "Template Course"
+title: ""
 author: "Lisa DeBruine"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
