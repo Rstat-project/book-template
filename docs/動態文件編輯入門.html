@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <title>單元 4 1007動態文件編輯入門 | 可重製統計：中文學習手冊</title>
   <meta name="description" content="隨堂授課講義，依授課場合調整內容。" />
-  <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
+  <meta name="generator" content="bookdown 0.24 and GitBook 2.6.7" />
 
   <meta property="og:title" content="單元 4 1007動態文件編輯入門 | 可重製統計：中文學習手冊" />
   <meta property="og:type" content="book" />
@@ -24,7 +24,7 @@
 <meta name="author" content="陳紹慶" />
 
 
-<meta name="date" content="2021-09-16" />
+<meta name="date" content="2021-09-18" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,9 +32,10 @@
   
   
 <link rel="prev" href="r程式語言入門.html"/>
-
+<link rel="next" href="datacolada98資料.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/fuse.js@6.4.6/dist/fuse.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
@@ -42,7 +43,6 @@
 <link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
 <link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
-
 
 
 
@@ -67,7 +67,6 @@
 pre > code.sourceCode { white-space: pre; position: relative; }
 pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
 pre.sourceCode { margin: 0; }
 @media screen {
@@ -175,7 +174,7 @@ div.csl-indent {
 <li class="chapter" data-level="0.0.2" data-path="index.html"><a href="index.html#level-2"><i class="fa fa-check"></i><b>0.0.2</b> Level 2</a></li>
 <li class="chapter" data-level="0.1" data-path="index.html"><a href="index.html#學習成效評估"><i class="fa fa-check"></i><b>0.1</b> 學習成效評估</a></li>
 </ul></li>
-<li class="chapter" data-level="1" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html"><i class="fa fa-check"></i><b>1</b> 0916從資料科學基本功開始的理由</a>
+<li class="chapter" data-level="1" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html"><i class="fa fa-check"></i><b>1</b> 00_0916從資料科學基本功開始的理由</a>
 <ul>
 <li class="chapter" data-level="1.1" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#為何心理學需要統計"><i class="fa fa-check"></i><b>1.1</b> 為何心理學需要統計？</a></li>
 <li class="chapter" data-level="1.2" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#世代學好統計的標準"><i class="fa fa-check"></i><b>1.2</b> 2020世代學好統計的標準？</a></li>
@@ -183,7 +182,7 @@ div.csl-indent {
 <li class="chapter" data-level="1.4" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#課程講授及作業演練模式"><i class="fa fa-check"></i><b>1.4</b> 課程講授及作業演練模式</a></li>
 <li class="chapter" data-level="1.5" data-path="從資料科學基本功開始的理由.html"><a href="從資料科學基本功開始的理由.html#hello-git-and-github"><i class="fa fa-check"></i><b>1.5</b> Hello! git and github</a></li>
 </ul></li>
-<li class="chapter" data-level="2" data-path="如何看透研究資料.html"><a href="如何看透研究資料.html"><i class="fa fa-check"></i><b>2</b> 0923如何看透研究資料</a>
+<li class="chapter" data-level="2" data-path="如何看透研究資料.html"><a href="如何看透研究資料.html"><i class="fa fa-check"></i><b>2</b> 01_0923如何看透研究資料</a>
 <ul>
 <li class="chapter" data-level="2.1" data-path="如何看透研究資料.html"><a href="如何看透研究資料.html#正向心理學再現研究資料"><i class="fa fa-check"></i><b>2.1</b> 正向心理學再現研究資料</a></li>
 <li class="chapter" data-level="2.2" data-path="如何看透研究資料.html"><a href="如何看透研究資料.html#活動一"><i class="fa fa-check"></i><b>2.2</b> 活動一</a></li>
@@ -194,7 +193,7 @@ div.csl-indent {
 <li class="chapter" data-level="2.5.1" data-path="如何看透研究資料.html"><a href="如何看透研究資料.html#參考文獻"><i class="fa fa-check"></i><b>2.5.1</b> 參考文獻</a></li>
 </ul></li>
 </ul></li>
-<li class="chapter" data-level="3" data-path="r程式語言入門.html"><a href="r程式語言入門.html"><i class="fa fa-check"></i><b>3</b> 0930 R程式語言入門</a>
+<li class="chapter" data-level="3" data-path="r程式語言入門.html"><a href="r程式語言入門.html"><i class="fa fa-check"></i><b>3</b> 02_0930 R程式語言入門</a>
 <ul>
 <li class="chapter" data-level="3.1" data-path="r程式語言入門.html"><a href="r程式語言入門.html#認識r-studio介面"><i class="fa fa-check"></i><b>3.1</b> 認識R Studio介面</a></li>
 <li class="chapter" data-level="3.2" data-path="r程式語言入門.html"><a href="r程式語言入門.html#測試r-studio功能"><i class="fa fa-check"></i><b>3.2</b> 測試R Studio功能</a></li>
@@ -219,6 +218,10 @@ div.csl-indent {
 </ul></li>
 </ul></li>
 <li class="chapter" data-level="4" data-path="動態文件編輯入門.html"><a href="動態文件編輯入門.html"><i class="fa fa-check"></i><b>4</b> 1007動態文件編輯入門</a></li>
+<li class="chapter" data-level="5" data-path="datacolada98資料.html"><a href="datacolada98資料.html"><i class="fa fa-check"></i><b>5</b> 09_Datacolada98資料</a></li>
+<li class="chapter" data-level="6" data-path="資料變項重新整理.html"><a href="資料變項重新整理.html"><i class="fa fa-check"></i><b>6</b> 10_資料變項重新整理</a></li>
+<li class="chapter" data-level="7" data-path="管道運作子part01.html"><a href="管道運作子part01.html"><i class="fa fa-check"></i><b>7</b> 11_管道運作子Part01</a></li>
+<li class="chapter" data-level="8" data-path="管道運作子part02.html"><a href="管道運作子part02.html"><i class="fa fa-check"></i><b>8</b> 12_管道運作子Part02</a></li>
 <li class="appendix"><span><b>附錄</b></span></li>
 <li class="divider"></li>
 <li><a rel="license" href="https://creativecommons.org/licenses/by-sa/4.0/" 
@@ -247,36 +250,6 @@ div.csl-indent {
 <div id="動態文件編輯入門" class="section level1" number="4">
 <h1><span class="header-section-number">單元 4</span> 1007動態文件編輯入門</h1>
 
-</div>
-
-
-
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Kristal, Ariella S., Ashley V. Whillans, Max H. Bazerman, Francesca Gino, Lisa L. Shu, Nina Mazar, and Dan Ariely. 2020. <span>“Signing at the Beginning Versus at the End Does Not Decrease Dishonesty.”</span> <em>Proceedings of the National Academy of Sciences</em> 117 (13): 7103–7. <a href="https://doi.org/10.1073/pnas.1911695117">https://doi.org/10.1073/pnas.1911695117</a>.
-</div>
-<div class="csl-entry">
-R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div class="csl-entry">
-RStudio Team. 2021. <em>RStudio: Integrated Development Environment for r</em>. Boston, MA: RStudio, PBC. <a href="http://www.rstudio.com/">http://www.rstudio.com/</a>.
-</div>
-<div class="csl-entry">
-Seligman, Martin E. P., Tracy A. Steen, Nansook Park, and Christopher Peterson. 2005. <span>“Positive <span>Psychology Progress</span>: <span>Empirical Validation</span> of <span>Interventions</span>.”</span> <em>American Psychologist</em> 60 (5): 410–21. <a href="https://doi.org/10.1037/0003-066X.60.5.410">https://doi.org/10.1037/0003-066X.60.5.410</a>.
-</div>
-<div class="csl-entry">
-Shu, Lisa L., Nina Mazar, Francesca Gino, Dan Ariely, and Max H. Bazerman. 2012. <span>“Signing at the Beginning Makes Ethics Salient and Decreases Dishonest Self-Reports in Comparison to Signing at the End.”</span> <em>Proceedings of the National Academy of Sciences</em> 109 (38): 15197–200. <a href="https://doi.org/10.1073/pnas.1209746109">https://doi.org/10.1073/pnas.1209746109</a>.
-</div>
-<div class="csl-entry">
-Uri Simonsohn, Joe Simmons, and Leif Nelson. 2021. <span>“[98] <span>Evidence</span> of <span>Fraud</span> in an <span>Influential Field Experiment About Dishonesty</span>.”</span> <span>Data Colada</span>. August 17, 2021. <a href="https://datacolada.org/98">https://datacolada.org/98</a>.
-</div>
-<div class="csl-entry">
-Woodworth, Rosalind J., Angela O’Brien-Malone, Mark R. Diamond, and Benjamin Schüz. 2017. <span>“Web-<span>Based Positive Psychology Interventions</span>: <span>A Reexamination</span> of <span>Effectiveness</span>.”</span> <em>Journal of Clinical Psychology</em> 73 (3): 218–32. <a href="https://doi.org/10.1002/jclp.22328">https://doi.org/10.1002/jclp.22328</a>.
-</div>
-<div class="csl-entry">
-———. 2018. <span>“Data from, <span>‘<span>Web</span>-Based <span>Positive Psychology Interventions</span>: <span>A Reexamination</span> of <span>Effectiveness</span>’</span>.”</span> <em>Journal of Open Psychology Data</em> 6 (February): 1. <a href="https://doi.org/10.5334/jopd.35">https://doi.org/10.5334/jopd.35</a>.
-</div>
-</div>
 </div>
 <div class="psyteachr_footer">
   
@@ -388,12 +361,11 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="r程式語言入門.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="r程式語言入門.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="datacolada98資料.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
-<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
 <script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
 <script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
@@ -435,7 +407,7 @@ gitbook.start({
 },
 "download": {},
 "search": {
-"engine": "lunr",
+"engine": "fuse",
 "options": null
 },
 "toc": {
