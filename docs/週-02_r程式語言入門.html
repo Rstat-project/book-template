@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>第 18 期末專題發表會 | 可重製統計：中文學習手冊</title>
+  <title>第 3 週 02_R程式語言入門 | 可重製統計：中文學習手冊</title>
   <meta name="description" content="隨堂授課講義，依授課場合調整內容。" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="第 18 期末專題發表會 | 可重製統計：中文學習手冊" />
+  <meta property="og:title" content="第 3 週 02_R程式語言入門 | 可重製統計：中文學習手冊" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="第 18 期末專題發表會 | 可重製統計：中文學習手冊" />
+  <meta name="twitter:title" content="第 3 週 02_R程式語言入門 | 可重製統計：中文學習手冊" />
   
   <meta name="twitter:description" content="隨堂授課講義，依授課場合調整內容。" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="週-15_虛擬樣本資料及模擬方法.html"/>
-
+<link rel="prev" href="週-01_如何看透研究資料.html"/>
+<link rel="next" href="週-03_動態文件編輯入門.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<meta property="og:title" content="第 18 期末專題發表會 | 可重製統計：中文學習手冊">
+<meta property="og:title" content="第 3 週 02_R程式語言入門 | 可重製統計：中文學習手冊">
 <meta property="og:description" content="以資料科學為基礎，學習統計的入門指南。">
 <meta property="og:image" content="https://psyteachr.github.io/images/twitter/psyteachr.png">
 <meta property="og:url" content="https://psyteachr.github.io/book-template/">
@@ -281,35 +281,118 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="期末專題發表會" class="section level1" number="18">
-<h1><span class="header-section-number">第 18</span> 期末專題發表會</h1>
+<div id="週-02_r程式語言入門" class="section level1" number="3">
+<h1><span class="header-section-number">第 3</span> 週 02_R程式語言入門</h1>
+<!--- 上課日期: 20210930 --->
+<blockquote>
+<p>請先確認領取作業assignment002，並在Rstudio建立作業複本專案</p>
+</blockquote>
+<blockquote>
+<p>遇到安裝或匯入套件的問題，請到討論區<a href="https://github.com/Rstat-project/ug1-practical/discussions/8">各平台git/R/Rstudio操作問題&amp;解決方式</a>查看有無可行的解決方式。如果已有方法無法解決，複製錯誤訊息回覆這份貼文。</p>
+</blockquote>
+<div id="認識r-studio介面" class="section level2" number="3.1">
+<h2><span class="header-section-number">3.1</span> 認識R Studio介面</h2>
+<p><code>Console</code>: R語言終端視窗
+<code>Source</code>: R腳本, Rmarkdown編輯視窗
+<code>Environment</code>: 監看已載入的R物件
+<code>Plots</code>: 繪圖函式輸出
+<code>Viewer</code>: shiny網頁輸出</p>
+</div>
+<div id="測試r-studio功能" class="section level2" number="3.2">
+<h2><span class="header-section-number">3.2</span> 測試R Studio功能</h2>
+<p>開啟作業複本專案內的“FIG2-1.Rmd”，比較自行測試結果與原電子書圖2-1的差異。</p>
+<p>介面設定調整：“Tools -&gt; Global Options -&gt; Pane Layout”</p>
+</div>
+<div id="函式與參數" class="section level2" number="3.3">
+<h2><span class="header-section-number">3.3</span> 函式與參數</h2>
+<pre><code>function(argument1, argument2, ...)</code></pre>
+</div>
+<div id="練習1-與-練習2" class="section level2" number="3.4">
+<h2><span class="header-section-number">3.4</span> 練習1 與 練習2</h2>
+<p>開啟作業複本專案內的“Assignment.Rmd”，按照教練的解說練習。</p>
+</div>
+<div id="參數預設名稱" class="section level2" number="3.5">
+<h2><span class="header-section-number">3.5</span> 參數預設名稱</h2>
+<p>比較電子書2.0.7三段程式碼的執行結果。</p>
+</div>
+<div id="rstudio編寫程式碼技巧" class="section level2" number="3.6">
+<h2><span class="header-section-number">3.6</span> Rstudio編寫程式碼技巧</h2>
+<p>使用“Assignment.Rmd”，<strong>技巧測試</strong>這段的R chunk測試電子書2.0.8展示的技巧</p>
+</div>
+<div id="瀏覽packages" class="section level2" number="3.7">
+<h2><span class="header-section-number">3.7</span> 瀏覽packages</h2>
+<p>跟著教練查看已經有的packages</p>
+<p><code>base</code>常用函式<a href="files/base-r-TC.pdf">速查表</a></p>
+<p><a href="https://rstat-project.github.io/Reproducible_STAT/notes/base_R_demo.html">基礎 R 語法寫作示範</a></p>
+<pre><code>套件(package)類似手機作業系統
+函式(function)類以手機應用程式</code></pre>
+</div>
+<div id="練習3-安裝套件" class="section level2" number="3.8">
+<h2><span class="header-section-number">3.8</span> 練習3: 安裝套件</h2>
+<p>如果packages裡沒有<code>tidyverse</code>，再由<code>Console</code>執行電子書2.0.10的指令</p>
+</div>
+<div id="練習4-匯入套件" class="section level2" number="3.9">
+<h2><span class="header-section-number">3.9</span> 練習4: 匯入套件</h2>
+<p>仼何R腳本,Rmarkdown文件檔一開始要執行匯入需要套件的函式</p>
+<p>Rmarkdown文件檔應匯入的套件應放在開頭的<code>setup</code> chunk</p>
+</div>
+<div id="升級套件" class="section level2" number="3.10">
+<h2><span class="header-section-number">3.10</span> 升級套件</h2>
+<p>遇到版本不相容的訊息時，需要重新執行安裝套件函式。</p>
+<p>許多套件說明文件會提供維持最新版本的建議操作。</p>
+</div>
+<div id="函式名稱衝突" class="section level2" number="3.11">
+<h2><span class="header-section-number">3.11</span> 函式名稱衝突</h2>
+<p>在<code>Console</code>測試電子書2.0.13的指令。</p>
+</div>
+<div id="物件objects" class="section level2" number="3.12">
+<h2><span class="header-section-number">3.12</span> 物件(Objects)</h2>
+<p>R的所有物件以指派運算子<code>&lt;-</code>宣告。例如“FIG2-1.Rmd”裡的<code>x</code>與<code>y</code>。</p>
+<p>統計分析的變項(variable)在R環境中，是以物件處理。變項/物件通常是統計分析函式的參數。</p>
+</div>
+<div id="練習5-創建物件" class="section level2" number="3.13">
+<h2><span class="header-section-number">3.13</span> 練習5: 創建物件</h2>
+<p>使用“Assignment.Rmd”，<strong>練習5</strong>這段的R chunk測試電子書2.0.15展示的程式碼</p>
+<!--- 首先在討論區回應**測試結果**的前五位同學，採計本次作業**演練活用度**評分。 --->
+</div>
+<div id="清理不再需要的物件" class="section level2" number="3.14">
+<h2><span class="header-section-number">3.14</span> 清理不再需要的物件</h2>
+<p>從<code>Console</code>清理</p>
+<p>從“Environment”清理</p>
+</div>
+<div id="rsutdio後台設定" class="section level2" number="3.15">
+<h2><span class="header-section-number">3.15</span> Rsutdio後台設定</h2>
+<p>參考Figure 2.5，還有跟著教練觀看最新版本設定介面</p>
+</div>
+<div id="執行緒sessions" class="section level2" number="3.16">
+<h2><span class="header-section-number">3.16</span> 執行緒(sessions)</h2>
+<p>Rmarkdown chunk將所有函式與物件堆疊於執行緒，累積太多會拖慢執行速度。編輯工作到一段落需要做一次<strong>重啟</strong>。</p>
+<p><strong>查看方式</strong> 在<code>Console</code>執行<code>sessionInfo()</code></p>
+</div>
+<div id="練習6-清除已執行的工作" class="section level2" number="3.17">
+<h2><span class="header-section-number">3.17</span> 練習6: 清除已執行的工作</h2>
+<p>參考電子書2.0.19進行<strong>重啟</strong>。</p>
+<p>(這份練習不列在本次作業)</p>
+</div>
+<div id="引用r與rstudio貢獻者資訊" class="section level2" number="3.18">
+<h2><span class="header-section-number">3.18</span> 引用R與Rstudio貢獻者資訊</h2>
+<p>配合“Assignment.Rmd”<strong>練習6</strong>進行課後演練。</p>
+<p>APA文內引用範例: R語言核心開發團隊<span class="citation">(<a href="#ref-R-base" role="doc-biblioref">R Core Team 2021</a>)</span>; Rstudio核心開發團隊<span class="citation">(<a href="#ref-Rstudiocoreteam" role="doc-biblioref"><strong>Rstudiocoreteam?</strong></a>)</span></p>
+</div>
+<div id="取得更多幫助資訊" class="section level2" number="3.19">
+<h2><span class="header-section-number">3.19</span> 取得更多幫助資訊</h2>
+<p>教練的經驗分享。</p>
+<p>配合“Assignment.Rmd”<strong>練習7</strong>，下課後尋找幫助資訊解決這道問題。</p>
+<div id="參考文獻-1" class="section level3" number="3.19.1">
+<h3><span class="header-section-number">3.19.1</span> 參考文獻</h3>
 
 </div>
-
-
-
+</div>
+</div>
+<h3>References</h3>
 <div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Kristal, Ariella S., Ashley V. Whillans, Max H. Bazerman, Francesca Gino, Lisa L. Shu, Nina Mazar, and Dan Ariely. 2020. <span>“Signing at the Beginning Versus at the End Does Not Decrease Dishonesty.”</span> <em>Proceedings of the National Academy of Sciences</em> 117 (13): 7103–7. <a href="https://doi.org/10.1073/pnas.1911695117">https://doi.org/10.1073/pnas.1911695117</a>.
-</div>
-<div class="csl-entry">
+<div id="ref-R-base" class="csl-entry">
 R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div class="csl-entry">
-Seligman, Martin E. P., Tracy A. Steen, Nansook Park, and Christopher Peterson. 2005. <span>“Positive <span>Psychology Progress</span>: <span>Empirical Validation</span> of <span>Interventions</span>.”</span> <em>American Psychologist</em> 60 (5): 410–21. <a href="https://doi.org/10.1037/0003-066X.60.5.410">https://doi.org/10.1037/0003-066X.60.5.410</a>.
-</div>
-<div class="csl-entry">
-Shu, Lisa L., Nina Mazar, Francesca Gino, Dan Ariely, and Max H. Bazerman. 2012. <span>“Signing at the Beginning Makes Ethics Salient and Decreases Dishonest Self-Reports in Comparison to Signing at the End.”</span> <em>Proceedings of the National Academy of Sciences</em> 109 (38): 15197–200. <a href="https://doi.org/10.1073/pnas.1209746109">https://doi.org/10.1073/pnas.1209746109</a>.
-</div>
-<div class="csl-entry">
-Uri Simonsohn, Joe Simmons, and Leif Nelson. 2021. <span>“[98] <span>Evidence</span> of <span>Fraud</span> in an <span>Influential Field Experiment About Dishonesty</span>.”</span> <span>Data Colada</span>. August 17, 2021. <a href="https://datacolada.org/98">https://datacolada.org/98</a>.
-</div>
-<div class="csl-entry">
-Woodworth, Rosalind J., Angela O’Brien-Malone, Mark R. Diamond, and Benjamin Schüz. 2017. <span>“Web-<span>Based Positive Psychology Interventions</span>: <span>A Reexamination</span> of <span>Effectiveness</span>.”</span> <em>Journal of Clinical Psychology</em> 73 (3): 218–32. <a href="https://doi.org/10.1002/jclp.22328">https://doi.org/10.1002/jclp.22328</a>.
-</div>
-<div class="csl-entry">
-———. 2018. <span>“Data from, <span>‘<span>Web</span>-Based <span>Positive Psychology Interventions</span>: <span>A Reexamination</span> of <span>Effectiveness</span>’</span>.”</span> <em>Journal of Open Psychology Data</em> 6 (February): 1. <a href="https://doi.org/10.5334/jopd.35">https://doi.org/10.5334/jopd.35</a>.
-</div>
 </div>
 </div>
 <div class="psyteachr_footer">
@@ -422,8 +505,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="週-15_虛擬樣本資料及模擬方法.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="週-01_如何看透研究資料.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="週-03_動態文件編輯入門.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>

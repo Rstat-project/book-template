@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>第 18 期末專題發表會 | 可重製統計：中文學習手冊</title>
+  <title>第 11 週 09_不誠實的誠實研究資料 | 可重製統計：中文學習手冊</title>
   <meta name="description" content="隨堂授課講義，依授課場合調整內容。" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="第 18 期末專題發表會 | 可重製統計：中文學習手冊" />
+  <meta property="og:title" content="第 11 週 09_不誠實的誠實研究資料 | 可重製統計：中文學習手冊" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="第 18 期末專題發表會 | 可重製統計：中文學習手冊" />
+  <meta name="twitter:title" content="第 11 週 09_不誠實的誠實研究資料 | 可重製統計：中文學習手冊" />
   
   <meta name="twitter:description" content="隨堂授課講義，依授課場合調整內容。" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="週-15_虛擬樣本資料及模擬方法.html"/>
-
+<link rel="prev" href="週-期末專題說明會.html"/>
+<link rel="next" href="週-10_整頓不誠實的資料變項.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<meta property="og:title" content="第 18 期末專題發表會 | 可重製統計：中文學習手冊">
+<meta property="og:title" content="第 11 週 09_不誠實的誠實研究資料 | 可重製統計：中文學習手冊">
 <meta property="og:description" content="以資料科學為基礎，學習統計的入門指南。">
 <meta property="og:image" content="https://psyteachr.github.io/images/twitter/psyteachr.png">
 <meta property="og:url" content="https://psyteachr.github.io/book-template/">
@@ -281,35 +281,152 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="期末專題發表會" class="section level1" number="18">
-<h1><span class="header-section-number">第 18</span> 期末專題發表會</h1>
+<div id="週-09_不誠實的誠實研究資料" class="section level1" number="11">
+<h1><span class="header-section-number">第 11</span> 週 09_不誠實的誠實研究資料</h1>
+<p>本次單元作業比照電子書的<a href="https://rstat-project.github.io/ug1-practical/aq-data-and-recap.html">AQ data and recap</a>，使用部落格<a href="http://datacolada.org/98">datacolada</a>揭露Shu等人(2012,已被撤銷)的可疑資料，做為單元9<sub>12的演練材料。這次的課堂作業是認識這份資料檔案的內容，演練如何自建Rmarkdown檔案，以及復習單元5</sub>8學到的資料整頓技巧。</p>
+<div id="資料編碼簿" class="section level2" number="11.1">
+<h2><span class="header-section-number">11.1</span> 資料編碼簿</h2>
+<p>開始演練前，教練會解釋每份資料檔案的變項，在Shu等人的研究結果所發揮的角色與功能。</p>
+<div class="kable-table">
+<table>
+<colgroup>
+<col width="2%" />
+<col width="8%" />
+<col width="24%" />
+<col width="64%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left">id</th>
+<th align="left">varname</th>
+<th align="left">files</th>
+<th align="left">description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">var1</td>
+<td align="left">id</td>
+<td align="left">averages.csv, car1~4.csv, condition.csv, font.csv</td>
+<td align="left">Masked policy id</td>
+</tr>
+<tr class="even">
+<td align="left">var2</td>
+<td align="left">condition</td>
+<td align="left">condition.csv</td>
+<td align="left">Sign on top vs sign on bottom of forms with miles being submitted</td>
+</tr>
+<tr class="odd">
+<td align="left">var3</td>
+<td align="left">font</td>
+<td align="left">font.csv</td>
+<td align="left">Is car #1 shown in Calibri or Cambria font in originally posted data (this variable was added for the Colada post)</td>
+</tr>
+<tr class="even">
+<td align="left">var4</td>
+<td align="left">baseline_car1</td>
+<td align="left">car1.csv</td>
+<td align="left">var4-var11: baseline 1-4 is the odometer reading before the experiment,<br/>update1_4 is the odometer submitted in the experiment</td>
+</tr>
+<tr class="odd">
+<td align="left">var5</td>
+<td align="left">update_car1</td>
+<td align="left">car1.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">var6</td>
+<td align="left">baseline_car2</td>
+<td align="left">car2.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">var7</td>
+<td align="left">update_car2</td>
+<td align="left">car2.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">var8</td>
+<td align="left">baseline_car3</td>
+<td align="left">car3.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">var9</td>
+<td align="left">update_car3</td>
+<td align="left">car3.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">var10</td>
+<td align="left">baseline_car4</td>
+<td align="left">car4.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="odd">
+<td align="left">var11</td>
+<td align="left">update_car4</td>
+<td align="left">car4.csv</td>
+<td align="left">NA</td>
+</tr>
+<tr class="even">
+<td align="left">var12</td>
+<td align="left">baseline_average</td>
+<td align="left">averages.csv</td>
+<td align="left">Average of baseline values for the up to four cars</td>
+</tr>
+<tr class="odd">
+<td align="left">var13</td>
+<td align="left">update_average</td>
+<td align="left">averages.csv</td>
+<td align="left">Average of update values for the up to four cars</td>
+</tr>
+<tr class="even">
+<td align="left">var14</td>
+<td align="left">diff_average</td>
+<td align="left">averages.csv</td>
+<td align="left">DV in original paper: average difference update-baseline for up to four cars</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>根據教練的說明，在[討論區]的對應貼文回覆以下問題：</p>
+<ul>
+<li><p><code>condition</code>欄位裡的Sing Top和Sign Bottom分別表示什麼？</p></li>
+<li><p>為何car2~4.csv這些檔案裡有許多<code>NA</code>?</p></li>
+<li><p>“averages.csv”的數值是如何總計的？</p></li>
+</ul>
+</div>
+<div id="演練1-取得資料檔案" class="section level2" number="11.2">
+<h2><span class="header-section-number">11.2</span> 演練1: 取得資料檔案</h2>
+<p>領取作業複本，建立作業專案，確認其中有壓縮檔“dishonest_data.zip”。
+解壓縮至儲存演練資料的資料夾，確認每個檔案的欄位配置符合“資料編碼簿”。</p>
+</div>
+<div id="演練2-自建rmarkdown檔案" class="section level2" number="11.3">
+<h2><span class="header-section-number">11.3</span> 演練2: 自建Rmarkdown檔案</h2>
+<p>參考電子書的<a href="https://rstat-project.github.io/ug1-practical/aq-data-and-recap.html#activity-2-open-a-new-markdown-document">示範</a>，在作業專案建立“Assignment.Rmd”文件檔。檔案選單的標題與姓名必須是英文，例如“Dishonest data,”“John Doe”，才能建立YAML前置設定區。</p>
+</div>
+<div id="演練3-建立r-chunk" class="section level2" number="11.4">
+<h2><span class="header-section-number">11.4</span> 演練3: 建立R chunk</h2>
+<p>參考電子書的<a href="https://rstat-project.github.io/ug1-practical/aq-data-and-recap.html#activity-3-create-a-new-code-chunk">示範</a>，為匯入每一個資料檔案準備一個R chunk。</p>
+<p>建議1:新建的Rmarkdown文件檔預設第一個R chunck是“setup”，應把要用到的package如<code>tidyverse</code>在此載入。</p>
+<p>建議2:參考課前示範影片，為每個chunk命名，有利在編輯視窗設定索引捷徑</p>
+</div>
+<div id="演練4-匯入資料檔" class="section level2" number="11.5">
+<h2><span class="header-section-number">11.5</span> 演練4: 匯入資料檔</h2>
+<p>在每個R chunk運用<code>read_csv()</code>匯入資料檔。</p>
+</div>
+<div id="演練5-檢視資料檔" class="section level2" number="11.6">
+<h2><span class="header-section-number">11.6</span> 演練5: 檢視資料檔</h2>
+<p>除了電子書<a href="https://rstat-project.github.io/ug1-practical/aq-data-and-recap.html#activity-5-look-at-the-data">示範</a>的<code>summary()</code>，也建議試試課前影片示範的<code>head()</code>,<code>tail()</code>,<code>str()</code>等。在每個R chunk之後紀錄你對那一份檔案的認識。</p>
+<blockquote>
+<p>下課前完成以上演練，並成功生成“Assignment.html”，完成推送就能獲得“準時推送”與“演練充分度”最高評分。以下是獲得“演練活用度”評分的課後問題。</p>
+</blockquote>
+<ul>
+<li>“averages.csv”的每個欄位數值是如何從“car1.csv”到“car4.csv”的<code>baselin_car?</code>與<code>update_car?</code>總計的？下次上課開始之前，在[討論區]的對應貼文回覆你的方法，被教練標註就能獲得“演練活用度”評分。</li>
+</ul>
 
-</div>
-
-
-
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div class="csl-entry">
-Kristal, Ariella S., Ashley V. Whillans, Max H. Bazerman, Francesca Gino, Lisa L. Shu, Nina Mazar, and Dan Ariely. 2020. <span>“Signing at the Beginning Versus at the End Does Not Decrease Dishonesty.”</span> <em>Proceedings of the National Academy of Sciences</em> 117 (13): 7103–7. <a href="https://doi.org/10.1073/pnas.1911695117">https://doi.org/10.1073/pnas.1911695117</a>.
-</div>
-<div class="csl-entry">
-R Core Team. 2021. <em>R: A Language and Environment for Statistical Computing</em>. Vienna, Austria: R Foundation for Statistical Computing. <a href="https://www.R-project.org/">https://www.R-project.org/</a>.
-</div>
-<div class="csl-entry">
-Seligman, Martin E. P., Tracy A. Steen, Nansook Park, and Christopher Peterson. 2005. <span>“Positive <span>Psychology Progress</span>: <span>Empirical Validation</span> of <span>Interventions</span>.”</span> <em>American Psychologist</em> 60 (5): 410–21. <a href="https://doi.org/10.1037/0003-066X.60.5.410">https://doi.org/10.1037/0003-066X.60.5.410</a>.
-</div>
-<div class="csl-entry">
-Shu, Lisa L., Nina Mazar, Francesca Gino, Dan Ariely, and Max H. Bazerman. 2012. <span>“Signing at the Beginning Makes Ethics Salient and Decreases Dishonest Self-Reports in Comparison to Signing at the End.”</span> <em>Proceedings of the National Academy of Sciences</em> 109 (38): 15197–200. <a href="https://doi.org/10.1073/pnas.1209746109">https://doi.org/10.1073/pnas.1209746109</a>.
-</div>
-<div class="csl-entry">
-Uri Simonsohn, Joe Simmons, and Leif Nelson. 2021. <span>“[98] <span>Evidence</span> of <span>Fraud</span> in an <span>Influential Field Experiment About Dishonesty</span>.”</span> <span>Data Colada</span>. August 17, 2021. <a href="https://datacolada.org/98">https://datacolada.org/98</a>.
-</div>
-<div class="csl-entry">
-Woodworth, Rosalind J., Angela O’Brien-Malone, Mark R. Diamond, and Benjamin Schüz. 2017. <span>“Web-<span>Based Positive Psychology Interventions</span>: <span>A Reexamination</span> of <span>Effectiveness</span>.”</span> <em>Journal of Clinical Psychology</em> 73 (3): 218–32. <a href="https://doi.org/10.1002/jclp.22328">https://doi.org/10.1002/jclp.22328</a>.
-</div>
-<div class="csl-entry">
-———. 2018. <span>“Data from, <span>‘<span>Web</span>-Based <span>Positive Psychology Interventions</span>: <span>A Reexamination</span> of <span>Effectiveness</span>’</span>.”</span> <em>Journal of Open Psychology Data</em> 6 (February): 1. <a href="https://doi.org/10.5334/jopd.35">https://doi.org/10.5334/jopd.35</a>.
-</div>
 </div>
 </div>
 <div class="psyteachr_footer">
@@ -422,8 +539,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="週-15_虛擬樣本資料及模擬方法.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-
+<a href="週-期末專題說明會.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="週-10_整頓不誠實的資料變項.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
