@@ -214,12 +214,12 @@
 <h2><span class="header-section-number">4.1</span> 練習1</h2>
 <p>由於本課程不使用Rstudio伺服器版，將<a href="https://rstat-project.github.io/ug1-practical/getting-to-know-the-data.html">單元1</a>下載的資料檔案，複製到本機端的Rstudio專案資料夾。匯入檔案的建議方式/程式碼佈局：</p>
 <pre><code>library(tidyverse)
-data_path &lt;- dir(&quot;../../&quot;,             ## 假設data folder 在前兩層資料夾
+data_path &lt;- dir(&quot;../../..&quot;,             ## 假設data folder 在前三層資料夾
              pattern= &quot;mydatafile.csv&quot;, ## 要匯入的資料夾檔名
              include.dirs = TRUE,      ## 搜尋下層資料夾
              recursive = TRUE,         ## 搜尋所有相同檔名的檔案
              full.names = TRUE)        ## 回傳完整路徑
-dt &lt;- read_csv(data_path, encoding = &quot;UTF-8&quot;) ## 設定匯入資料編碼是UTF-8</code></pre>
+dt &lt;- read_csv(data_path) </code></pre>
 </div>
 <div id="練習2" class="section level2" number="4.2">
 <h2><span class="header-section-number">4.2</span> 練習2</h2>
