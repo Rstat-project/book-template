@@ -1,7 +1,7 @@
 --- 
 title: "可重製統計：中文學習手冊"
 author: "陳紹慶"
-date: "2021-10-06"
+date: "2021-10-07"
 site: bookdown::bookdown_site
 documentclass: book
 bibliography: [book.bib, packages.bib]
