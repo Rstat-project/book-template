@@ -4,11 +4,11 @@
 
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <title>第 5 週 04_初窺研究資料 | 可重製統計：中文學習手冊</title>
+  <title>第 6 週 05_資料清理技巧(上) | 可重製統計：中文學習手冊</title>
   <meta name="description" content="隨堂授課講義，依授課場合調整內容。" />
   <meta name="generator" content="bookdown 0.23 and GitBook 2.6.7" />
 
-  <meta property="og:title" content="第 5 週 04_初窺研究資料 | 可重製統計：中文學習手冊" />
+  <meta property="og:title" content="第 6 週 05_資料清理技巧(上) | 可重製統計：中文學習手冊" />
   <meta property="og:type" content="book" />
   
   
@@ -16,7 +16,7 @@
   
 
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="第 5 週 04_初窺研究資料 | 可重製統計：中文學習手冊" />
+  <meta name="twitter:title" content="第 6 週 05_資料清理技巧(上) | 可重製統計：中文學習手冊" />
   
   <meta name="twitter:description" content="隨堂授課講義，依授課場合調整內容。" />
   
@@ -31,8 +31,8 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black" />
   
   
-<link rel="prev" href="週-03_動態文件編輯入門.html"/>
-<link rel="next" href="週-05_資料清理技巧上.html"/>
+<link rel="prev" href="週-04_初窺研究資料.html"/>
+<link rel="next" href="週-06_資料清理技巧下.html"/>
 <script src="libs/header-attrs-2.10/header-attrs.js"></script>
 <script src="libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
 <link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
@@ -53,7 +53,7 @@
 
 <link href="libs/anchor-sections-1.0.1/anchor-sections.css" rel="stylesheet" />
 <script src="libs/anchor-sections-1.0.1/anchor-sections.js"></script>
-<meta property="og:title" content="第 5 週 04_初窺研究資料 | 可重製統計：中文學習手冊">
+<meta property="og:title" content="第 6 週 05_資料清理技巧(上) | 可重製統計：中文學習手冊">
 <meta property="og:description" content="以資料科學為基礎，學習統計的入門指南。">
 <meta property="og:image" content="https://psyteachr.github.io/images/twitter/psyteachr.png">
 <meta property="og:url" content="https://psyteachr.github.io/book-template/">
@@ -331,52 +331,105 @@ div.csl-indent {
           <div class="page-inner">
 
             <section class="normal" id="section-">
-<div id="週-04_初窺研究資料" class="section level1" number="5">
-<h1><span class="header-section-number">第 5</span> 週 04_初窺研究資料</h1>
-<!--- 上課日期: 20211014 --->
+<div id="週-05_資料清理技巧上" class="section level1" number="6">
+<h1><span class="header-section-number">第 6</span> 週 05_資料清理技巧(上)</h1>
+<!--- 上課日期: 20211021 --->
 <blockquote>
-<p>隨時參考<a href="https://rstat-project.github.io/Reproducible_STAT/">速查表資源</a></p>
+<p><code>[dplyr](https://dplyr.tidyverse.org/)</code>,<code>[ggplot2](https://ggplot2.tidyverse.org/)</code>的開發者有說明網站，程式碼有用到這些函式但遇到卡關的話，可先從說明網站找找可行範例。</p>
 </blockquote>
 <blockquote>
 <p>單元4~單元9建議同學可參考<a href="https://rstat-project.github.io/ug1-practical/">電子書</a>與<a href="https://rstat-project.github.io/ug-tactic/">講義</a>課前自行演練，上課會有最佳學習效果。</p>
 </blockquote>
-<p>單元4的作業檔案改編自“stub-loading-data.Rmd”，原電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-1-set-up">4.1</a>及<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-2-load-in-the-package">4.2</a>兩段演練活動是設定Assignment.Rmd，除了上課開始會帶領大家進行及測試，資料檔案位置確定，而且已經熟習Rmarkdown編輯技巧的同學可嘗試自行完成。</p>
-<div id="練習12" class="section level2" number="5.1">
-<h2><span class="header-section-number">5.1</span> 練習1,2</h2>
-<p>與英文電子書的演練不同：我們要在<code>setup</code> chunk先預備物件儲存“ahi-cesd.csv”與“participant-info.csv”的路徑。</p>
+<p>單元5的作業檔案改編自“stub-wrangling-1.Rmd”。</p>
+<p>這個單元我們透過美國新生兒姓名統計資料庫<code>babynames</code>，認識如何使用<code>dplyr</code>及<code>ggplot2</code>套件的函式初窺資料、選擇變項、排序及過濾資料、創建新變項、分組描述統計。最後我們要初次接觸後半單元會常用到的管道運算子<code>%&gt;%</code>。</p>
+<div id="認識tidyverse" class="section level2" number="6.1">
+<h2><span class="header-section-number">6.1</span> 認識<code>tidyverse</code></h2>
+<p>官方網站：<a href="https://www.tidyverse.org/" class="uri">https://www.tidyverse.org/</a></p>
+<p><a href="https://dplyr.tidyverse.org/"><img src="https://d33wubrfki0l68.cloudfront.net/621a9c8c5d7b47c4b6d72e8f01f28d14310e8370/193fc/css/images/hex/dplyr.png%20=150x" alt="dplyr" /></a></p>
+<p><a href="https://ggplot2.tidyverse.org/"><img src="https://d33wubrfki0l68.cloudfront.net/2c6239d311be6d037c251c71c3902792f8c4ddd2/12f67/css/images/hex/ggplot2.png%20=150x" alt="ggplot2" /></a></p>
+<p>這個單元會學到的函式：</p>
+<ul>
+<li><code>select()</code> Include or exclude certain variables (columns)</li>
+<li><code>filter()</code> Include or exclude certain observations (rows)</li>
+<li><code>mutate()</code> Create new variables (columns)</li>
+<li><code>arrange()</code> Change the order of observations (rows)</li>
+<li><code>group_by()</code> Organize the observations into groups</li>
+<li><code>summarise()</code> Derive aggregate variables for groups of observations</li>
+</ul>
+</div>
+<div id="練習1起始設定" class="section level2" number="6.2">
+<h2><span class="header-section-number">6.2</span> 練習1：起始設定</h2>
+<p>將<a href="https://rstat-project.github.io/ug1-practical/data-wrangling-1.html#activity-1-set-up-1">5.4</a>區塊內的套件，填寫在“Assignment.Rmd”的<code>setup</code> chunk，knit測試有沒有問題。</p>
+</div>
+<div id="babynames資料庫" class="section level2" number="6.3">
+<h2><span class="header-section-number">6.3</span> <code>babynames</code>資料庫</h2>
+<p>這套資料庫紀錄從1880~2017年，美國每年新生兒的姓名人次。</p>
+</div>
+<div id="練習2-預覽資料" class="section level2" number="6.4">
+<h2><span class="header-section-number">6.4</span> 練習2: 預覽資料</h2>
+<p>在“Assignment.Rmd”練習2預備的R chunk，呼叫<code>babynames</code></p>
+<!--- year, n, prop的data type --->
+</div>
+<div id="練習3-姓名熱門度歷史趨勢視覺化" class="section level2" number="6.5">
+<h2><span class="header-section-number">6.5</span> 練習3: 姓名熱門度歷史趨勢視覺化</h2>
+<ul>
+<li>提示 <code>%&gt;%</code> 管頭運算子</li>
+<li>提示 <code>%in%</code> 匹配運算子</li>
+</ul>
+<p>Figure 5.1 四個女嬰姓名</p>
+<p>Figure 5.2 四個嬰兒姓名，依性別分組</p>
+<p>Figure 5.3 另外四個嬰兒姓名，依性別分組</p>
+<!--- 限量~ 除了Emily，找出另外一個E開頭的姓名歷史趨勢，繪製曲線圖，回覆在討論區 --->
+</div>
+<div id="練習4-選擇想要的變項" class="section level2" number="6.6">
+<h2><span class="header-section-number">6.6</span> 練習4: 選擇想要的變項</h2>
+<p>認識<code>select()</code>的用途</p>
+</div>
+<div id="練習5-資料排序" class="section level2" number="6.7">
+<h2><span class="header-section-number">6.7</span> 練習5: 資料排序</h2>
+<p>認識<code>arrange()</code>的用途</p>
+</div>
+<div id="練習6-過濾有需要的資料" class="section level2" number="6.8">
+<h2><span class="header-section-number">6.8</span> 練習6: 過濾有需要的資料</h2>
+<p>認識<code>filter()</code>的用途；常用的各種邏輯運算子</p>
+</div>
+<div id="練習7-製造新變項" class="section level2" number="6.9">
+<h2><span class="header-section-number">6.9</span> 練習7: 製造新變項</h2>
+<p>認識<code>mutate()</code>的用途</p>
+<p>標記年代的分解動作</p>
+<pre><code>1880:1889/10
+floor(1880:1889/10)
+floor(1880:1889/10)*10</code></pre>
+</div>
+<div id="練習8-分組描述統計" class="section level2" number="6.10">
+<h2><span class="header-section-number">6.10</span> 練習8: 分組描述統計</h2>
 <blockquote>
-<p>除了Rstudio Cloud使用者，因為平台限制必須上傳檔案到雲端專案空間，本機版使用者應將原始資料放在其他資料夾路徑。</p>
+<p>描述統計常用函式</p>
 </blockquote>
-<p>開始接下來的練習之前，大家一起再看一次<a href="https://rstat-project.github.io/ug1-practical/files/woodworth.pdf">原論文</a>與<a href="files/data/code-book.pdf">code-book.pdf</a>。</p>
+<pre><code>log(x)            ##自然對數  
+exp(x)            ##自然指數  
+max(x)            ##最大值
+min(x)            ##最小值
+round(exp(x), 2)  ##顯示數值到小數點第2位
+signif(log(x), 3) ##小數點第3位起簡寫數值
+quantile(x)       ##百分位數
+rank(x)           ##次序位數
+sum(x)            ##總和  
+mean(x)           ##平均
+median(x)         ##中位數
+var(x)            ##樣本變異數
+sd(x)             ##樣本標準差
+cor(x,y)          ##相關</code></pre>
+<p>認識<code>summarise()</code>與<code>group_by()</code>的用途</p>
+<p>運用練習3建立的<code>dat</code>演練描述統計~只有Alexandra, Beverly, Emily, Kathleen四個名字</p>
+<!--- 限量~ 透過figure 5-1，解釋平均數與中位數在曲線圖內的意義 --->
+<p>運用練習7建立的<code>new_dat</code>演練描述統計</p>
+<!--- 限量~ 使用summarise()，計算不同年代不同性別人次標準差 --->
 </div>
-<div id="練習3匯入研究資料" class="section level2" number="5.2">
-<h2><span class="header-section-number">5.2</span> 練習3：匯入研究資料</h2>
-<p>使用已預備的路徑資料，產生如電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-3-read-in-data">4.4</a>示範的兩個資料物件<code>dat</code>與<code>pinfo</code>。</p>
-</div>
-<div id="練習4-預覽資料" class="section level2" number="5.3">
-<h2><span class="header-section-number">5.3</span> 練習4: 預覽資料</h2>
-<p>除了演練電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-4-check-your-data">4.5</a>的操作，也說明操作的函式有什麼功能？</p>
-<p><code>str()</code>, <code>summary()</code>, <code>head()</code></p>
-<p><strong>活用</strong>：論文Figure 2展示的研究流程，其中一個步驟區分參與者是不是參與“Signature Strengths”介入措施，那一個變項紀錄介入措施的區分？這項演練用到的那一個函式可以顯示介入措施的人次？</p>
-</div>
-<div id="練習5-合併資料物件" class="section level2" number="5.4">
-<h2><span class="header-section-number">5.4</span> 練習5: 合併資料物件</h2>
-<p>除了按照電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-5-join-the-files-together">4.6</a>的演練<code>inner_join()</code>，觀察輸出的<code>all_dat</code>的資料筆數有沒有少於<code>dat</code>? <code>all_dat</code>的變項(欄位)數目是否與<code>dat</code>和<code>pinfo</code>的變項(欄位)數目符合?</p>
-</div>
-<div id="練習-6挑出研究目的需要的變項" class="section level2" number="5.5">
-<h2><span class="header-section-number">5.5</span> 練習 6:挑出研究目的需要的變項</h2>
-<p>除了按照電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-5-join-the-files-together">4.7</a>的演練<code>select()</code>。對照<a href="files/data/code-book.pdf">code-book.pdf</a>與<a href="https://rstat-project.github.io/ug1-practical/files/woodworth.pdf">原論文</a>，談談<code>summarydata</code>包含的變項在之後的工作，要整理出什麼資訊？</p>
-<p>課後演練：論文摘要中有<strong>數值</strong>的句子，如何從<code>summarydata</code>取得對應資訊？</p>
-</div>
-<div id="練習-7-視覺化資料散佈" class="section level2" number="5.6">
-<h2><span class="header-section-number">5.6</span> 練習 7: 視覺化資料散佈</h2>
-<p>按照電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#activity-7-visualise-the-data">4.8</a>的演練繪製柱狀圖，以及小提琴箱形圖，回答電子書的問題。</p>
-<p><strong>課後演練</strong>：運用註解(#)，探索每行程式碼的功能，記錄你從執行結果學到的收穫，特別是這些函式如何構成繪圖成品。</p>
-<p><strong>活用</strong> 運用這項演練運用的註解技巧，分享你突破程式寫作難關的心得。</p>
-</div>
-<div id="練習-8-debug小試驗" class="section level2" number="5.7">
-<h2><span class="header-section-number">5.7</span> 練習 8: Debug小試驗</h2>
-<p>透過電子書<a href="https://rstat-project.github.io/ug1-practical/loading-data.html#debugging-exercises">4.10</a>的範例，重置R session之後，學習如何運用錯誤訊息除錯，以及R chunk的進階設定。</p>
+<div id="練習9-管道運算子" class="section level2" number="6.11">
+<h2><span class="header-section-number">6.11</span> 練習9: 管道運算子</h2>
+<p>練習8的<code>dat</code>描述統計程式碼，使用管道運算子<code>%&gt;%</code>串成一行。</p>
+<p>課後演練：練習8的<code>new_dat</code>描述統計程式碼，使用管道運算子<code>%&gt;%</code>串成一行。</p>
 
 </div>
 </div>
@@ -490,8 +543,8 @@ window.onload = function() {
           </div>
         </div>
       </div>
-<a href="週-03_動態文件編輯入門.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
-<a href="週-05_資料清理技巧上.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
+<a href="週-04_初窺研究資料.html" class="navigation navigation-prev " aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+<a href="週-06_資料清理技巧下.html" class="navigation navigation-next " aria-label="Next page"><i class="fa fa-angle-right"></i></a>
     </div>
   </div>
 <script src="libs/gitbook-2.6.7/js/app.min.js"></script>
